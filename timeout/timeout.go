@@ -1,4 +1,4 @@
-package timeout
+package grpc_timeout
 
 import (
 	"context"
