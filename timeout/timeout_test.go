@@ -1,4 +1,4 @@
-package timeout_test
+package grpc_timeout_test
 
 import (
 	"context"
@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/grpc-ecosystem/go-grpc-middleware/timeout"
+	grpc_timeout "github.com/grpc-ecosystem/go-grpc-middleware/timeout"
 	"github.com/stretchr/testify/assert"
 	"google.golang.org/grpc"
 )
@@ -29,7 +29,7 @@ func TestWithDefault(t *testing.T) {
 
 	for i, c := range cases {
 		t.Run(fmt.Sprintf("%d", i), func(t *testing.T) {
-			wd := timeout.WithDefault(c.defaultTimeout)
+			wd := grpc_timeout.WithDefault(c.defaultTimeout)
 
 			ctx := context.Background()
 			if c.explicitTimeout != noTimeout {
