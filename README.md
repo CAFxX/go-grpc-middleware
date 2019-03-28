@@ -67,6 +67,7 @@ myServer := grpc.NewServer(
 
 #### Client
    * [`grpc_retry`](retry/) - a generic gRPC response code retry mechanism, client-side middleware
+   * [`grpc_timeout`](tiemout/) - default timeout for client requests
 
 #### Server
    * [`grpc_validator`](validator/) - codegen inbound message validation from `.proto` options
